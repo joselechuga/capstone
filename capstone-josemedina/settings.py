@@ -44,7 +44,8 @@ ROOT_URLCONF = 'capstone-josemedina.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        # El servidor / hosting leera los archivos de templates desde la siguiente ruta
+        'DIRS': [os.path.join(BASE_DIR, 'templates')],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
